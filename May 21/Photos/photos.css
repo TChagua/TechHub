@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box
+}
+
+.container{
+    float:left;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    overflow:auto
+}
+.container:hover{
+    border: 1px solid black
+}
+a{
+    text-decoration: none
+}

@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    border:1px black solid;
+}
+.container div{
+    
+    padding:70px;
+    text-align:center;
+}
+.row1{
+    width:50%;
+    float:left;
+    height:200px;
+    
+}
+.small{
+    width:25%
+}
+.row2{
+    float:left;
+    width:50%;
+    height:350px;
+}
+.long{
+    width:25%
+}
+.row3{
+    clear:left;
+    width:100%;
+    height:150px;
+}

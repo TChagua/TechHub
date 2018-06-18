@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box
+}
+.container div{
+    
+    padding:70px;
+    text-align:center;
+}
+.row1{
+    width:75%;
+    float:left;
+    height:200px;
+    border-top:1px black solid;
+    border-bottom:1px black solid;
+    border-right:1px black solid;
+}
+.long{
+    width:25%;
+    height:550px;
+    border:1px black solid;
+    
+}
+.row2{
+    float:left;
+    width:50%;
+    height:350px;
+    border-right:1px black solid;
+    border-bottom:1px black solid;
+}
+.small{
+    width:25%
+}
+.row3{
+    clear:left;
+    width:100%;
+    height:150px;
+    border-left:1px black solid;
+    border-right:1px black solid;
+    border-bottom:1px black solid;
+}

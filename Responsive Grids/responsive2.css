@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+ }
+ body{
+     color: #fff;
+ }
+ 
+
+.container>div{
+    border:1px solid black; 
+}
+
+.header1{
+    grid-area: header1;
+}
+.header2{
+    grid-area: header2;
+}
+
+.green{
+    background-color: green;
+    grid-area:gr;
+    height:150px;
+}
+.blue{
+    background-color: blue;
+    grid-area:bl;
+    height:300px;
+}
+.row4{
+    grid-area: row4;
+    height: 250px;
+}
+.row5{
+    grid-area: row5;
+    height: 250px;
+}
+.row6{
+    grid-area: row6;
+    height: 250px;
+}
+.row7{
+    grid-area: row7;
+    height: 250px;
+}
+.row8{
+    grid-area: row8;
+    height: 250px;
+}
+.row9{
+    grid-area: row9;
+    height: 250px;
+}
+.row10{
+    grid-area: row10;
+    height: 250px;
+}
+.row11{
+    grid-area: row11;
+    height: 250px;
+}
+.row12{
+    grid-area: row12;
+    height: 250px;
+}
+.row13{
+    grid-area: row13;
+    height: 250px;
+}
+.row14{
+    grid-area: row14;
+    height: 250px;
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        display:grid;
+        grid-template-columns: 25% 75%;
+        margin: 0 auto;
+        grid-auto-rows: minmax(100px, auto);
+        grid-gap: 10px;
+        grid-template-areas:
+        "header1 header2"
+        "gr gr"
+        "bl bl"
+        "row4 row4"
+        "row5 row5"
+        "row6 row6"
+        "row7 row7"
+        "row8 row8"
+        "row9 row9"
+        "row10 row10"
+        "row11 row11"
+        "row12 row12"
+        "row13 row13"
+        "row14 row14";
+    }
+}
+@media screen and (min-width:481px){
+    .container{
+        display:grid;
+        grid-template-columns: 25% 25% 50%;
+        margin: 0 auto;
+        grid-auto-rows: minmax(100px, auto); 
+        grid-gap: 10px;
+        grid-template-areas:
+        "header1 header2 header2"
+        "gr gr gr"
+        "bl bl bl"
+        "row4 row4 row5"
+        "row6 row6 row7"
+        "row8 row8 row9"
+        "row10 row10 row11"
+        "row12 row12 row13"
+        "row14 row14 row14";
+    }
+    .blue{
+        height:250px;
+    }
+    .green{
+        height: 100px;
+    }
+}
+@media screen and (min-width:1000px){
+    .container{
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+        grid-gap: 10px;
+        grid-template-areas:
+        "header1 header2 header2 header2"
+        "gr gr gr gr"
+        "row4 row5 bl bl"
+        "row6 row7 row8 row9"
+        "row10 row11 row14 row14"
+        "row12 row13 row14 row14";
+    }
+    .green{
+        height: 100px;
+    }
+    
+    .blue{
+        height: 300px;
+    }
+    .row8, .row9{
+        height: 200px;
+    }
+    .row12, .row13{
+        height: 150px;
+    }
+    .row14{
+        height: 410px;
+    }
+    }
+    

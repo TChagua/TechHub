@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div.circle{display: inline-block; position:relative; left: 45%; top: 50%;}
+        .circle{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+          
+        }
+        .rectangle{
+            height: 50px;
+            width: 100px;
+            background-color: #555;
+            position:relative; left: 50%; top: 50%;
+        }
+        #red{background-color:red}
+        #red:hover ~ #rec{background-color: red}
+        #blue{background-color:blue}
+        #blue:hover ~ #rec{background-color: blue}
+        #green{background-color:green}
+        #green:hover ~ #rec{background-color:green}
+        #yellow{background-color:yellow}
+        #yellow:hover ~ #rec{background-color:yellow}
+        #purple{background-color: purple}
+        #purple:hover ~ #rec{background-color: purple}
+
+    </style>
+</head>
+<body>
+    <div>
+    <div class = "circle" id = "red"></div>
+    <div class = "circle" id = "blue"></div>
+    <div class = "circle" id = "green"></div>
+    <div class = "circle" id = "yellow"></div>
+    <div class = "circle" id = "purple"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class = "rectangle" id = "rec"></div>
+</div>
+</body>
+</html>

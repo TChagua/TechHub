@@ -1,0 +1,35 @@
+Design the page for a small screen
+
+Start the process by viewing the web page at a small window size to simulate what it might look like on a mobile device. Adjust some of the CSS to fine tune how the page displays.
+
+    Make the font-size larger
+    Make the h1 font-size smaller
+    Increase the leading
+    Add a small amount of margin to the page edges
+
+By designing for the small screen first we're using what is known as a mobile first approach. By doing this, we start with a basic design or lowest common denominator and then work on enhancing more sophisticated browsers with advanced features or layouts. This ensures that we're designing an experience that will work for everyone. It also has the side effect of often helping us realize what content on our website is really important.
+Finding your browser window size
+
+In Chrome you can easily find out what size your browser window is by using the Web Inspector. Open the web inspector in Chrome and resize your browser window while watching the top right corner. The pixel dimensions should appear as you resize.
+Introduce a new breakpoint
+
+Start expanding your browser window width. Do this until you get to a point where the design no longer works. For example, the line length might become too long for the text to be easily readable. Or perhaps the page becomes wide enough that it no long makes sense for the images to display in a stack.
+
+Record the width of the browser window at this point. This will be your first breakpoint. A breakpoint is simply a point at which we're defining that the design should change.
+
+Create a new media query in your browser using the pixel dimension you recorded as the min-width media feature test. Within this breakpoint, change your CSS to do the following:
+
+    Change the background color (to help you see when the media query takes effect)
+    Adjust the font-size if necessary
+    Adjust the page margins
+    Make the photos display in two columns
+
+Create another breakpoint for large screens
+
+Resize your browser window again to find another breakpoint. Add a new media query in your CSS and adjust the following rules:
+
+    Change the background color
+    Adjust the font-size if necessary
+    Adjust the page margins
+    Make the photos display in three columns
+    Add a max-width to the page to make sure the line length never gets too long

@@ -1,0 +1,116 @@
+*{
+   box-sizing: border-box;
+}
+body{
+    color: #fff;
+    font-family: "Nunito Semibold";
+    text-align: center;
+}
+
+.item{
+    border:1px solid black;
+    padding: 30px;
+}
+.upper1{
+    background-color: blue;
+    grid-area: upper1;
+    
+}
+.upper2{
+    background-color: blue;
+    grid-area: upper2;
+    
+}
+.middle{
+    color: black;
+    grid-area:mid;
+
+}
+.three1{
+    background-color: pink;
+    grid-area: three1;
+}
+.three2{
+    background-color: pink;
+    grid-area: three2;
+}
+.three3{
+    background-color: pink;
+    grid-area: three3;
+}
+
+.bottom1{
+    background-color:lightgreen;
+    grid-area: bottom1;
+}
+.bottom2{
+    background-color:lightgreen;
+    grid-area: bottom2;
+}
+.bottom3{
+    background-color:lightgreen;
+    grid-area: bottom3;
+}
+.bottom4{
+    background-color:lightgreen;
+    grid-area: bottom4;
+}
+@media screen and (max-width:799px){
+    .grid-container{
+        display:grid;
+        grid-gap:10px;
+        margin: 0 auto;
+        grid-template-columns: 100%;
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: 
+        "upper1"
+        "upper2"
+        "mid"
+        "mid"
+        "mid"
+        "three1"
+        "three2" 
+        "three3"
+        "bottom1"
+        "bottom2"
+        "bottom3"
+        "bottom4";
+    }
+}
+
+@media screen and (min-width:800px){
+    .grid-container{
+        display:grid;
+        grid-gap:10px;
+        margin: 0 auto;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: 
+        "upper1 upper1 upper1 upper1 upper1 upper1 upper1 upper1 upper1 upper1 upper1 upper1"
+        "upper2 upper2 upper2 upper2 upper2 upper2 upper2 upper2 upper2 upper2 upper2 upper2"
+        "mid mid mid mid mid mid mid mid mid mid mid mid"
+        "mid mid mid mid mid mid mid mid mid mid mid mid"
+        "three1 three1 three1 three1 three1 three1 three1 three1 three1 three1 three1 three1"
+        "three2 three2 three2 three2 three2 three2 three2 three2 three2 three2 three2 three2"
+        "three3 three3 three3 three3 three3 three3 three3 three3 three3 three3 three3 three3"
+        "bottom1 bottom1 bottom1 bottom1 bottom1 bottom1 bottom2 bottom2 bottom2 bottom2 bottom2 bottom2"
+        "bottom3 bottom3 bottom3 bottom3 bottom3 bottom3 bottom4 bottom4 bottom4 bottom4 bottom4 bottom4";
+    }
+    
+}
+@media screen and (min-width:1000px){
+    .grid-container{
+        display:grid;
+        grid-gap:10px;
+        margin: 0 auto;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: 
+        "upper1 upper1 upper1 upper1 upper1 upper1 upper2 upper2 upper2 upper2 upper2 upper2"
+        "mid mid mid mid mid mid mid mid mid mid mid mid"
+        "mid mid mid mid mid mid mid mid mid mid mid mid"
+        "three1 three1 three1 three1 three2 three2 three2 three2 three3 three3 three3 three3"
+        "bottom1 bottom1 bottom1 bottom2 bottom2 bottom2 bottom3 bottom3 bottom3 bottom4 bottom4 bottom4";
+    }
+
+}
