@@ -85,8 +85,8 @@ add.addEventListener("click", function(e){
             e.target.innerHTML = input;
             if(e.target.innerHTML != 0){
             e.target.classList.add("green");
-            }else if (e.target.innerHTML == 0){
-             e.target.classList.remove("green")
+            }else {
+                e.target.classList.remove("green")
             }
         }
     })
