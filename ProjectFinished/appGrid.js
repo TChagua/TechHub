@@ -129,7 +129,7 @@ remove.addEventListener("click", function(e){
     gridPapa.removeChild(gridPapa.lastElementChild)
 
     //Remove Date
-        if (dayNum.innerHTML == 1){
+        if (dayNum.innerHTML == 0){
             date.innerHTML = new Date(2018, 3, 30);
         }else if(dayNum.innerHTML%4 == 1 || dayNum.innerHTML%4 == 2 || dayNum.innerHTML%4 == 3){
             start.setDate(start.getDate() - 2);
