@@ -129,7 +129,7 @@ remove.addEventListener("click", function(e){
 
     //Remove Date
         if (dayNum.innerHTML == 1){
-            date.innerHTML = getMyDate(start);
+            date.innerHTML = new Date(2018, 3, 30);
         }else if(dayNum.innerHTML%4 == 1 || dayNum.innerHTML%4 == 2 || dayNum.innerHTML%4 == 3){
             start.setDate(start.getDate() - 2);
             date.innerHTML = getMyDate(start)
