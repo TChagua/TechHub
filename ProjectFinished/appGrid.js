@@ -67,6 +67,7 @@ add.addEventListener("click", function(e){
             start.setDate(start.getDate() + 1);
             date.innerHTML = getMyDate(start);
         }
+ remove.disabled = false;
 })
 
 
