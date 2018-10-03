@@ -57,6 +57,13 @@ div p{
 
 #score{
     padding: 20px;
+    font-style: Georgia sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+#highScore{
+    font-style: Georgia sans-serif;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -65,7 +72,7 @@ div p{
     height: 150px;
     width: 300px;
     border:1px solid #008080;
-    margin: 50px 400px;
+    margin: 50px 540px;
     text-align: center;
     background-color: #ffe6ff;
 }
