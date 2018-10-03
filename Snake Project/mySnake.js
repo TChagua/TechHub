@@ -1,42 +1,44 @@
 //Menu Items
 let snakeLength = document.querySelector('#snakeLength');
-let snakeSpeed = document.querySelector('#snakeSpeed')
-let boardSize = document.querySelector('#boardSize')
+let snakeSpeed = document.querySelector('#snakeSpeed');
+let boardSize = document.querySelector('#boardSize');
 
 //Control Items
 let play = document.querySelector('#play');
-let hidden = document.querySelector('#hidden')
+let hidden = document.querySelector('#hidden');
 let replay = document.querySelector('#replay');
-let yes = document.querySelector("#yes")
-let no = document.querySelector("#no")
+let yes = document.querySelector("#yes");
+let no = document.querySelector("#no");
 
+//Levels
 let novice = document.querySelector('#novice');
 let amateur = document.querySelector('#amateur');
 let master = document.querySelector('#master');
 
 //GAME CLASSES
 let snake, apple, game, board;
+let highScore = document.querySelector("#highScore");
 let score = document.querySelector('#score');
 let scoreNumber = 0;
-score.textContent = `Your score is ${scoreNumber}` ;
+score.textContent = `Your score is ${scoreNumber}`;
+
 
 //Local Storage Functions
 function populateStorage(){
     localStorage.setItem('SnakeLength', snakeLength.value);
     localStorage.setItem('snakeSpeed', snakeSpeed.value);
     localStorage.setItem('boardSize', boardSize.value);
-    localStorage.setItem('highestScore', scoreNumber)
-    
+
     setDefaults();
 }
 function setDefaults() {
     let currentLength = localStorage.getItem('SnakeLength');
     let currentSpeed = localStorage.getItem('snakeSpeed');
     let currentSize = localStorage.getItem('boardSize');
-  
     snakeLength.value = currentLength;
     snakeSpeed.value = currentSpeed;
     boardSize.value = currentSize;
+
   }
 
 
@@ -45,12 +47,11 @@ if(!localStorage.getItem('SnakeLength')||
     !localStorage.getItem('boardSize')){
         populateStorage();
     }else{
-        setDefaults()
+        setDefaults();
     }
 snakeLength.onchange = populateStorage;
 snakeSpeed.onchange = populateStorage;
 boardSize.onchange = populateStorage;
-
 
 //Creating Board
 class Board{
@@ -58,12 +59,12 @@ class Board{
         this.element = document.querySelector('canvas');
         this.context = this.element.getContext('2d');
         this.cell = 10;
-        this.fillColour =  'white',
+        this.fillColour =  'white';
         this.strokeColour = '#008080';
         this.element.width = boardSize.value;
-        this.element.height = boardSize.value
-        this.width = this.element.width
-        this.height = this.element.height
+        this.element.height = boardSize.value;
+        this.width = this.element.width;
+        this.height = this.element.height;
         
     }
     redraw(){
@@ -81,8 +82,8 @@ class Board{
 //Creating Snake
 class Snake{
     constructor() {
-        this.length = snakeLength.value
-        this.bodyColour = 'seagreen'
+        this.length = snakeLength.value;
+        this.bodyColour = 'seagreen';
         this.body = [];
         this.direction = 'right';
         this.nd = []; 
@@ -126,7 +127,11 @@ class Snake{
     //Checking whether our snake ate an apple. If so, we create a new one
         if(this.eat()) {
             scoreNumber+=10;
-            score.textContent = `Your score is ${scoreNumber}` 
+            let bestScore = localStorage.getItem('bestScore');
+            if (scoreNumber > bestScore || !bestScore) {
+                localStorage.setItem('bestScore', JSON.stringify(scoreNumber));
+            }
+            score.textContent = `Your score is ${scoreNumber}`;
             this.tail = {x: this.nx, y: this.ny};
             apple = new Apple()
         } else {
@@ -224,12 +229,19 @@ class Game{
     over(){
         clearInterval(this.interval);
         board.element.setAttribute('class', 'hide');
-        hidden.classList.remove('hide')
-        yes.classList.remove('hide')
-        no.classList.remove('hide')
-        replay.classList.remove('hide')
+        hidden.classList.remove('hide');
+        yes.classList.remove('hide');
+        no.classList.remove('hide');
+        replay.classList.remove('hide');
         play.setAttribute('class', 'hide');
-        score.setAttribute('class', 'hide');
+        let bestScore = JSON.parse(localStorage.getItem('bestScore'));
+        if(scoreNumber <= bestScore){
+            highScore.textContent = `Your best score is ${bestScore}`
+        }else{
+            highScore.textContent = `Your new best score is ${scoreNumber}`
+        }
+        highScore.classList.remove('hide');
+        score.setAttribute('class', 'hide');  
     };
 }
 
@@ -238,7 +250,7 @@ class Game{
 //for play button
 play.addEventListener('click', function(){
     game = new Game();
-    score.classList.remove('hide')
+    score.classList.remove('hide');
     play.setAttribute('class', 'hide');
     game.start();
     game.gameLoop();
@@ -250,11 +262,12 @@ yes.addEventListener('click', function(){
     replay.setAttribute('class', 'hide');
     yes.setAttribute('class', 'hide');
     no.setAttribute('class', 'hide');
-    score.classList.remove('hide')
+    score.classList.remove('hide');
+    highScore.setAttribute('class', 'hide');
     scoreNumber = 0;
-    score.textContent = `Your score is ${scoreNumber}` ;
+    score.textContent = `Your score is ${scoreNumber}`;
     game = new Game();
-    board.element.classList.remove('hide')
+    board.element.classList.remove('hide');
     game.start();
     game.gameLoop();
 })
@@ -262,13 +275,13 @@ yes.addEventListener('click', function(){
 //Control keys
 document.addEventListener('keydown', function(e) {
 	
-		if(e.keyCode == "37" && snake.direction != 'right') {
-			snake.nd.push('left');
-		} else if(e.keyCode == "38" && snake.direction != 'down') {
-			snake.nd.push('up');
-		} else if(e.keyCode == "39" && snake.direction != 'left') {
-			snake.nd.push('right');
-		} else if(e.keyCode == "40" && snake.direction != 'up') {
-			snake.nd.push('down');
-		}
+	if(e.keyCode == "37" && snake.direction != 'right') {
+		snake.nd.push('left');
+	} else if(e.keyCode == "38" && snake.direction != 'down') {
+		snake.nd.push('up');
+	} else if(e.keyCode == "39" && snake.direction != 'left') {
+		snake.nd.push('right');
+	} else if(e.keyCode == "40" && snake.direction != 'up') {
+		snake.nd.push('down');
+	}
 })
