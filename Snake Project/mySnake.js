@@ -8,7 +8,7 @@ let play = document.querySelector('#play');
 let hidden = document.querySelector('#hidden');
 let replay = document.querySelector('#replay');
 let yes = document.querySelector("#yes");
-let no = document.querySelector("#no");
+
 
 //Levels
 let novice = document.querySelector('#novice');
@@ -231,7 +231,6 @@ class Game{
         board.element.setAttribute('class', 'hide');
         hidden.classList.remove('hide');
         yes.classList.remove('hide');
-        no.classList.remove('hide');
         replay.classList.remove('hide');
         play.setAttribute('class', 'hide');
         let bestScore = JSON.parse(localStorage.getItem('bestScore'));
@@ -261,7 +260,6 @@ yes.addEventListener('click', function(){
     hidden.setAttribute('class', 'hide');
     replay.setAttribute('class', 'hide');
     yes.setAttribute('class', 'hide');
-    no.setAttribute('class', 'hide');
     score.classList.remove('hide');
     highScore.setAttribute('class', 'hide');
     scoreNumber = 0;
@@ -275,13 +273,13 @@ yes.addEventListener('click', function(){
 //Control keys
 document.addEventListener('keydown', function(e) {
 	
-	if(e.keyCode == "37" && snake.direction != 'right') {
-		snake.nd.push('left');
-	} else if(e.keyCode == "38" && snake.direction != 'down') {
-		snake.nd.push('up');
-	} else if(e.keyCode == "39" && snake.direction != 'left') {
-		snake.nd.push('right');
-	} else if(e.keyCode == "40" && snake.direction != 'up') {
-		snake.nd.push('down');
-	}
+		if(e.keyCode == "37" && snake.direction != 'right') {
+			snake.nd.push('left');
+		} else if(e.keyCode == "38" && snake.direction != 'down') {
+			snake.nd.push('up');
+		} else if(e.keyCode == "39" && snake.direction != 'left') {
+			snake.nd.push('right');
+		} else if(e.keyCode == "40" && snake.direction != 'up') {
+			snake.nd.push('down');
+		}
 })
