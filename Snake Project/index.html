@@ -8,34 +8,34 @@
     <title>Snake Game</title>
 </head>
 <body>
-        <div id="menu">
-            <div id="level">
-                <p>Your Level:</p>
-                <input type="radio" name="level" id="novice">Novice
-                <input type="radio" name="level" id="amateur">Amateur
-                <input type="radio" name="level" id="master">Master
-            </div>
-            <div id = 'board'>
-                <p>Board Size: 
-                    <input type="number" id="boardSize" min ="100" max ="450" step ="50" value = "300" >
-                </p>
-            </div>
-            <div id="length">
-                <p>Snake Length: 
-                    <input type="number" id="snakeLength" min ="1" max ="10" value = "3" >
-                </p> 
-            </div>
-            <div id="speed">
-                <p>Snake Speed:
-                    <input type="number" id="snakeSpeed" step ="10" min ="10" max ="110" value = "70" >
-                </p>
-            </div>
+    <div id="menu">
+        <div id="level">
+            <p>Your Level:</p>
+            <input type="radio" name="level" id="novice">Novice
+            <input type="radio" name="level" id="amateur">Amateur
+            <input type="radio" name="level" id="master">Master
         </div>
-        <div id = "hidden" class= 'hide'>
-            <p class = 'hide' id = "replay">GAME OVER! <br>Want to play again?</p>
-            <button class = 'hide' id = "yes">Yes</button> <button class = 'hide' id= "no">No</button>
+        <div id = 'board'>
+            <p>Board Size: 
+                <input type="number" id="boardSize" min ="100" max ="450" step ="50" value = "300" >
+            </p>
         </div>
-    
+        <div id="length">
+            <p>Snake Length: 
+                <input type="number" id="snakeLength" min ="1" max ="10" value = "3" >
+            </p> 
+        </div>
+        <div id="speed">
+            <p>Snake Speed:
+                <input type="number" id="snakeSpeed" step ="10" min ="10" max ="110" value = "70" >
+            </p>
+        </div>
+    </div>
+    <div id = "hidden" class= 'hide'>
+        <p class = 'hide' id = "replay">GAME OVER! <br>Try Again!</p>
+        <button class = 'hide' id = "yes">Play</button>
+    </div>
+
         <button id = "play">Play</button>
         <p id="score" class = "hide"></p>
         <p id="highScore" class="hide"></p>
