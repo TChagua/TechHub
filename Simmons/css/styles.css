@@ -1,0 +1,319 @@
+/* 
+ * Colors
+ * 
+ * Dark gray		#34383c
+ * medium gray		#81858a
+ * purple			#620e6e
+ * blue				#4385c1
+ * light blue		#9ac9f4
+ * darker blue		#043867
+ * darkest blue	#002342
+ * blue tint		#e7ecf0
+ * green				#7aa120
+ */
+
+
+
+body {
+	background: white;
+	color: #81858a;
+	font: 1em/1.6 Helvetica, Verdana, sans-serif;
+	
+}
+.container{
+	display:grid;
+	grid-gap: 10px;
+	margin: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas:
+	"img img img"
+	"gr gr gr"
+	"program1 program2 program3"
+	"purp bl section"
+	"buttons buttons buttons";
+	
+}
+.green{
+	background-color: #7aa120;
+	color:white;
+	width:100%;
+	grid-area: gr;
+}
+.green h3{
+	font-size:2em;
+}
+.green > *{
+	display:inline-block;
+	padding:5px 15px;
+}
+
+.item {
+	height: 200px;
+	width:350px;
+	padding:20px;
+	margin-bottom: 20px;
+}
+.program1,.program2, .program3{
+	background-color: #e7ecf0;
+}
+
+.program1{
+	grid-area: program1;
+}
+
+.program2{
+	grid-area: program2;
+}
+.program3{
+	grid-area: program3;
+}
+.program3 h2{
+	color:#4385c1
+}
+.program1 > p,.program2 > p, .program3 > p{
+	color:black;
+}
+
+
+.purple{
+	background-color: #620e6e;
+	grid-area: purp;
+}
+.purple h2, p{
+	color:white;
+}
+
+.blue {
+	background-color: #4385c1;
+	grid-area: bl;
+}
+.blue h2, p{
+	color:white;
+}
+section{
+	grid-area: section;
+}
+section > p{
+	color: #4385c1;
+	display: inline-block;
+}
+section > h4{
+	color:#002342;
+}
+.bord {
+	color: #7aa120;
+	border:1px solid #81858a;
+	padding:8px 5px;
+	margin:10px;
+	display: inline-block;
+}
+
+
+#buttons{
+	grid-area: buttons;
+	margin-bottom: 30px;
+	color:#043867;
+}
+.hero{
+	grid-area: img;
+	position:relative;
+}
+.hero h3, .hero p {
+	position:absolute;
+	left:30%;
+	top:35%;
+	color:white;
+}
+
+.hero h3{
+	font-size: 3em;
+	text-transform: uppercase;
+	font-family: Verdana, sans-serif;
+	border-top:1px solid white;
+	padding: 0 50px 0 60px;
+	letter-spacing: 5px;
+	
+}
+.hero p{
+	position:absolute;
+	left:25%;
+	top:50%;
+	font-size: 30px;
+	border-bottom: 1px solid white;
+	padding: 0 60px;
+}
+header {
+	background: #4385c1;
+	color: white;
+	font-size: .9rem;	
+}
+.flex1{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	flex-direction: row;
+	
+}
+/* Header */
+.branding {
+	text-transform: uppercase;
+	flex-grow:2;
+	align-self: center;
+	width:0%;
+	padding:10px 30px;
+}
+.branding p{
+	color: #9ac9f4;
+	padding-left:40px;
+}
+
+
+/* navigation */
+#quick-nav {
+	padding:10px;
+	width:30%
+	
+}
+#quick-nav a {
+	border-right: 1px solid white;
+	padding-right:5px;
+	
+}
+#quick-nav li {
+	border-right: 1px solid #9ac9f4;
+	list-style-type: none;
+	display:inline-block;
+	margin:10px;
+}
+#quick-nav li:last-of-type {
+	border: none;
+}
+
+#quick-nav a:link, #quick-nav a:visited {
+	color: white;	
+}
+#quick-nav a:hover, #quick-nav a:focus, #quick-nav a:active {
+	color: #9ac9f4;
+}
+
+
+#main-nav {
+	background-color: #043867;
+	font-family: Georgia, serif;
+	font-size: 1.2em;
+	width:100%;
+	
+}
+
+#main-nav li{
+	list-style-type: none;
+	display:inline-block;
+	
+}
+ #main-nav a{
+	 color:white;
+	 padding:20px 45px;
+ }
+
+#main-nav a:hover {
+	background-color: #002342;
+}
+
+.utilities{
+	margin-top: 20px;
+	padding-top: 40px;
+}
+.utilities > .button{
+	color:#ffffff;
+	text-transform: capitalize;
+}
+
+
+footer {
+	background: #34383c;
+	color: white;
+	padding: 1em;
+	height:600px;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, serif;
+	font-weight: normal;
+}
+
+h2 {
+	font: 2.25rem/1.2 Helvetica, Verdana, sans-serif;
+}
+.hero h3 {
+	list-style-type: none;
+	font-size:2em;
+}
+.purple p, .blue p{
+	font-size:1.5em;
+}
+h4 {
+	font-size: 1.2rem;
+}
+
+p {	font-size: .925rem;
+}
+
+
+img {
+	margin-top:40px;
+	max-width: 100%;
+}
+
+
+/* Links */
+
+a:visited {
+	color: #043867;
+	text-decoration: none;
+}
+
+a:link{
+	color:#4385c1;
+	text-decoration: none;
+}
+
+.button {
+	border: 1px solid #9ac9f4;
+	text-align:center;
+	padding:10px 50px;
+	margin:30px;
+	text-transform: uppercase;
+	color:#4385c1;
+}
+
+
+#full-nav{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+}
+
+
+#full-nav a:link, #full-nav a:visited {
+	color: #81858a;	
+}
+#full-nav h3 a:link, #full-nav h3 a:visited {
+	color: white;
+}
+#full-nav a:hover, #full-nav a:focus, #full-nav a:active {
+	color: white;
+}
+#full-nav h3{
+	text-align: start;
+}
+footer ul{
+	padding:0;
+}
+li{
+	list-style-type: none;
+	text-align: start;
+}
+small{
+	padding-left:400px;
+}
