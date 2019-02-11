@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.wrapper{
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a{
+    text-decoration-line: none;
+    color: #fff;
+    display: inline;
+    padding: 20px;
+    
+    
+}
+.logo{
+    font-weight: 600;
+    font-size: 30px;
+    font-family:"Lobster";
+    color: #fff;
+}
+h1{
+    text-align: center;
+    font-size: 80px;
+    padding-top: 100px;
+    font-family:"Lobster";
+    color: #fff;
+}
+header h3{
+    text-align: center;
+    color: #fff;
+}
+
+header button{
+    padding: 8px 15px;
+    border-radius: 30px;
+    color:#032057;
+    font-size: 18px;
+    margin: 200px 600px;
+    border: 1px solid #fff;
+}
+header button:hover{
+    border: 1px solid #032057;
+    background-color: #fff;
+}
+
+.subscription{
+    position: relative;
+}
+.subscription img{
+    opacity: 0.2;
+    overflow:hidden;
+    width: 100%;
+    height: auto;
+}
+.subscription img+hr{
+    background-color:#032057;
+    width: 50px;
+    height: 5px;
+    top:20%;
+    left:47%;
+    position: absolute;
+}
+.subscription p{
+    color:#032057;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    font-weight: 900;
+    font-size:40px;
+    text-align: center;
+    width:100%;
+    
+}
+.subscription input{
+    border-radius: 20px;
+    padding: 10px;
+    width: 300px;
+    position: absolute;
+    left:35%;
+    top:50%;
+    border:1px solid white;
+}
+.subscription input:focus{
+    box-shadow: 0 0 10px #54d7b7;
+    border: 1px solid #54d7b7;
+    outline: 0px;
+}
+.subscription button{
+    border-radius: 30px;
+    background-color: #54d7b7;
+    color:#fff;
+    padding: 10px 35px;
+    position: absolute;
+    left:55%;
+    top:50%;
+    border:1px solid #54d7b7;
+}
+.subscription button:hover{
+    background-color: #fff;
+    color: #54d7b7;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-areas: 'travel company resources media';
+    grid-gap:120px;
+    color:#032057;
+    margin: 20px;
+}
+.travel{grid-area:'travel'; margin-left:40px;}
+.company{grid-area:'company'}
+.resources{grid-area:'resources'}
+.social-media{grid-area:'media'}
+.footer ul{
+    list-style-type: none;
+}
+.footer h3{
+    margin: 30px;
+    text-align: left;
+}
+.footer li{
+    margin: 10px;
+}
+.footer ul li a {
+    text-decoration-line: none;
+    color:#425e7d;
+}
+.social-media hr{
+    background-color:#032057;
+    width: 390px;
+    height: 3px;
+    top:45%;
+    right:3%;
+    position: absolute;
+}
+.social-media h2{
+    text-align: left;
+    font-size: 50px;
+    font-family:"Lobster";
+}
+.social-media h3{
+    margin-top: 60px;
+}
+i{
+    border:1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+.wrapper+h2{
+    color: lightgray;
+    margin: 10px;
+    font-size: 50px;
+    text-shadow: 1px 1px #032057;
+}
+.gallery{
+    display:flex;
+    flex-wrap: wrap;
+    position:relative;
+}
+.gallery img{
+    z-index: -1;
+    width: 30%;
+}
+
+[alt~="Scotland"],[alt~="England"]{margin-left: 40px;}
+
+.gallery h2{
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 1px 1px #032057;
+    font-family:"Lobster";
+}
+[alt~="Scotland"]+span{
+    position: absolute;
+    top: 25%;
+    left: 13%;
+}
+[alt~="Canada"]+span{
+    position: absolute;
+    top: 25%;
+    left: 43%;
+}
+[alt~="Italy"]+span{
+    position: absolute;
+    top: 25%;
+    left: 75%;
+}
+[alt~="England"]+span{
+    position: absolute;
+    top: 65%;
+    left: 13%;
+}
+[alt~="Iceland"]+span{
+    position: absolute;
+    top: 65%;
+    left: 43%;
+}
+[alt~="New_Zealand"]+span{
+    position: absolute;
+    top: 65%;
+    left: 70%;
+}
